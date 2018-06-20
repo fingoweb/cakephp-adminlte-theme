@@ -1,5 +1,5 @@
 {
-  "name": "maiconpinto/cakephp-adminlte-theme",
+  "name": "fingoweb/cakephp-adminlte-theme",
   "description": "CakePHP 3.x AdminLTE Theme.",
   "type": "cakephp-plugin",
   "keywords": ["cakephp", "templates", "plugin"],
