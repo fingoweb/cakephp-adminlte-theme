@@ -3,7 +3,7 @@ use Cake\Utility\Inflector;
 
 $fields = collection($fields)
   ->filter(function($field) use ($schema) {
-    return !in_array($schema->columnType($field), ['binary', 'text']);
+    return !in_array($schema->getColumnType($field), ['binary', 'text']);
   })
   ->take(7);
 %>
@@ -65,7 +65,7 @@ if (!in_array($field, ['created', 'modified', 'updated'])) :%>
     }
 
     if ($isKey !== true) {
-      if (!in_array($schema->columnType($field), ['integer', 'biginteger', 'decimal', 'float'])) {
+      if (!in_array($schema->getColumnType($field), ['integer', 'biginteger', 'decimal', 'float'])) {
 %>
                 <td><?= h($<%= $singularVar %>-><%= $field %>) ?></td>
 <%
