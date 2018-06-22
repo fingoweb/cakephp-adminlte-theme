@@ -162,28 +162,17 @@ foreach ($relations as $alias => $details):
                             <tr>
                                 <% foreach ($details['fields'] as $field): %>
                                     <% if (in_array($field, ['created', 'modified'])) { continue; } %>
-
-                                    <th>
-                                    <%= Inflector::humanize($field) %>
-                                    </th>
-                                        
+                                    <th><?= __('<%= Inflector::humanize($field) %>') ?></th>   
                                 <% endforeach; %>
-                                    
-                                <th>
-                                    <?php echo __('Actions'); ?>
-                                </th>
+                                <th><?php echo __('Actions'); ?></th>
                             </tr>
 
                             <?php foreach ($<%= $singularVar %>-><%= $details['property'] %> as $<%= $otherSingularVar %>): ?>
                                 <tr>
                                     <% foreach ($details['fields'] as $field): %>
                                     <% if (in_array($field, ['created', 'modified'])) { continue; } %>
-
-                                    <td>
-                                    <?= h($<%= $otherSingularVar %>-><%= $field %>) ?>
-                                    </td>
+                                    <td> <?= h($<%= $otherSingularVar %>-><%= $field %>) ?> </td>
                                     <% endforeach; %>
-
                                     <% $otherPk = "\${$otherSingularVar}->{$details['primaryKey'][0]}"; %>
                                     <td class="actions">
                                     <?= $this->Html->link(__('View'), ['controller' => '<%= $details['controller'] %>', 'action' => 'view', <%= $otherPk %>], ['class'=>'btn btn-info btn-xs']) %>

@@ -10,7 +10,7 @@ $fields = collection($fields)
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <%= $pluralHumanName %>
+    <?= __('<%= $pluralHumanName %>') ?>
     <div class="pull-right"><?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
   </h1>
 </section>
