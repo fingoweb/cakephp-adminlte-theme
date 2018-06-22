@@ -5,7 +5,7 @@ use Cake\Utility\Inflector;
 %>
 <section class="content-header">
   <h1>
-    <%= $singularHumanName %>
+    <?= __('<%= $singularHumanName %>') ?>
     <small><?= __('<%= Inflector::humanize($action) %>') ?></small>
   </h1>
   <ol class="breadcrumb">
