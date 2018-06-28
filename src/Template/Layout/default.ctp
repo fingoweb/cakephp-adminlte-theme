@@ -91,7 +91,7 @@
             size: "3px"
         }).css("width", "100%");
 
-        var a = $('a[href="<?php echo $this->getRequers()->getAttribute("webroot")  . $this->getRequers()->getPath() ?>"]');
+        var a = $('a[href="<?php echo $this->request->getUri()->getPath(); ?>"]');
         if (!a.parent().hasClass('treeview') && !a.parent().parent().hasClass('pagination')) {
             a.parent().addClass('active').parents('.treeview').addClass('active');
         }
