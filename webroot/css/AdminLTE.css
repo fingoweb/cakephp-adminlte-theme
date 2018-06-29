@@ -3271,6 +3271,21 @@ table.text-center th {
   margin: 10px 0;
 }
 /*
+ * Page:error message
+ * ------------------------------
+ */
+
+.error-message {
+  display: block;
+  background-color: #dd4b39;
+  font-size: 14px;
+  padding: 10px;
+  color: #fff; }
+  .error-message ul, .error-message ol {
+    list-style: none;
+    margin-bottom: 0px; }
+
+/*
  * Page: 400 and 500 error pages
  * ------------------------------
  */
